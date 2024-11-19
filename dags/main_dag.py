@@ -58,8 +58,8 @@ with DAG(
         region=REGION,
         job_name=CLOUD_RUN_JOB_NAME,
         project_id=PROJECT_ID,
-        google_cloud_conn_id=GCP_CONN_ID,
-        wait_for_completion=True,  # 작업이 완료될 때까지 대기
+        dag=dag
+        deferrable=True,  # 작업이 완료될 때까지 대기
     )
 
     # delete_gcs_object = GCSDeleteObjectsOperator(
