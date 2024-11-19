@@ -23,12 +23,12 @@ with DAG(
     catchup=False,
 ) as dag:
 
-    # sense_files_in_folder = GCSObjectsWithPrefixExistenceSensor(
-    #     task_id='sense_files_in_folder',
-    #     bucket='your-gcs-bucket',           # 감지할 GCS 버킷 이름
-    #     prefix='your/folder/path/',          # 감지할 폴더 경로
-    #     google_cloud_conn_id='google_cloud_default'  # GCP 연결 ID
-    # )
+    sense_files_in_folder = GCSObjectsWithPrefixExistenceSensor(
+        task_id='sense_files_in_folder',
+        bucket='input-file-list',           # 감지할 GCS 버킷 이름
+        prefix='exel_list/',          # 감지할 폴더 경로
+        google_cloud_conn_id='google_cloud_default'  # GCP 연결 ID
+    )
     
     # pull_messages_async = PubSubPullSensor(
     # task_id="pull_messages_async",
