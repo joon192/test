@@ -68,3 +68,6 @@ with DAG(
     #     objects=FILE_NAME,
     #     google_cloud_conn_id=GCP_CONN_ID,
     # )
+
+
+    sense_files_in_folder >> run_cloud_run_job
