@@ -55,8 +55,8 @@ with DAG(
 
     run_cloud_run_job = CloudRunExecuteJobOperator(
         task_id="run_cloud_run_job",
-        location=REGION,
-        job_id=CLOUD_RUN_JOB_NAME,
+        region=REGION,
+        job_name=CLOUD_RUN_JOB_NAME,
         project_id=PROJECT_ID,
         google_cloud_conn_id=GCP_CONN_ID,
         wait_for_completion=True,  # 작업이 완료될 때까지 대기
