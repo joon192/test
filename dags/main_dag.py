@@ -3,16 +3,16 @@ from airflow.providers.google.cloud.sensors.gcs import GCSObjectsWithPrefixExist
 from airflow.providers.google.cloud.operators.gcs import GCSDeleteObjectsOperator
 from airflow.providers.google.cloud.operators.cloud_run import CloudRunExecuteJobOperator
 from airflow.providers.google.cloud.operators.compute import ComputeEngineStartInstanceOperator, ComputeEngineStopInstanceOperator
-import datetime
+from datetime import datetime
 
 DESTINATION_BUCKET_NAME = "test_bucket_hakjoon"
 FILE_NAME = "new_file.xlsx"
 
 
 GCP_CONN_ID = "google_cloud_default"   # Airflow의 GCP 연결 ID
-PROJECT_ID = "my-project"              # GCP 프로젝트 ID
-REGION = "us-central1"                 # Cloud Run이 실행될 GCP 리전
-CLOUD_RUN_JOB_NAME = "my-cloud-run-job" # 실행할 Cloud Run Job 이름
+PROJECT_ID = "hakjoon-hyundai-test"              # GCP 프로젝트 ID
+REGION = " asia-northeast3"                 # Cloud Run이 실행될 GCP 리전
+CLOUD_RUN_JOB_NAME = "nas-to-gcs" # 실행할 Cloud Run Job 이름
 
 
 
