@@ -58,7 +58,7 @@ with DAG(
         region=REGION,
         job_name=CLOUD_RUN_JOB_NAME,
         project_id=PROJECT_ID,
-        dag=dag
+        dag=dag,
         deferrable=True,  # 작업이 완료될 때까지 대기
     )
 
